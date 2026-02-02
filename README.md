@@ -131,4 +131,4 @@ This project is created for AISS scholarship application purposes.
 
 - This portfolio is submitted as part of the AISS scholarship application
 - All links and content are final and will not be amended after submission
-- The portfolio adheres to AISS admission requirements for portfolio submissions
+- The portfolio adheres to AISS admission requirements for portfolio commits and submissions.
