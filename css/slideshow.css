@@ -47,12 +47,32 @@ h1, h2, h3, h4, h5, h6 {
     background-color: transparent !important;
 }
 
+.site-navbar.scrolled.bg-light {
+    background: #e9ecef !important;
+}
+
+.site-navbar.scrolled .navbar-brand {
+    color: #333 !important;
+    border-color: #333 !important;
+}
+
 /* Override Bootstrap navbar-light active state */
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
     color: #8490ff !important;
     background-color: transparent !important;
+}
+
+@media (max-width: 991.98px) {
+    .site-navbar.bg-light {
+        background: #e9ecef !important;
+    }
+    
+    .site-navbar.bg-light .navbar-brand {
+        color: #333 !important;
+        border-color: #333 !important;
+    }
 }
 
 .site-section {
@@ -236,33 +256,12 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 80px 0 20px 0 !important;
+    padding: 120px 0 20px 0 !important;
     margin: 0;
     position: relative;
 }
 
-#section-portfolio.site-section {
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-}
-
-#section-skills.site-section {
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-}
-
-#section-contact.site-section {
-    padding-top: 60px !important;
-    padding-bottom: 80px !important;
-    margin-top: 0 !important;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-}
+/* Section padding follows base .site-section { padding: 5em 0; } from style.css */
 
 #section-about img {
     max-width: 350px;
@@ -281,6 +280,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #section-about .col-lg-7 {
     padding-left: 50px;
+    text-align: left;
 }
 
 #section-about .container {
@@ -505,12 +505,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .slide-contribution .slide-content ul li {
-    padding: 3px 0;
-    padding-left: 25px;
-    font-size: 16px;
-    line-height: 1.5;
+    padding: 12px 0;
+    padding-left: 30px;
+    font-size: 18px;
+    line-height: 1.6;
     text-align: left;
     max-width: 90%;
+    position: relative;
 }
 
 /* Project 4 - Slide 2 - Reduced bullet spacing and centered */
@@ -520,7 +521,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-slideshow[data-project="4"] .slide:nth-child(2) .slide-content ul li {
-    padding: 2px 0;
+    padding: 12px 0;
     padding-left: 30px;
     text-align: left;
     display: inline-block;
@@ -528,6 +529,19 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 85%;
     margin: 0 auto;
     position: relative;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.project-slideshow[data-project="4"] .slide:nth-child(2) .slide-content ul li:before {
+    content: "•";
+    position: absolute;
+    left: 8px;
+    color: #8490ff;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1;
+    top: 12px;
 }
 
 /* Project 5 - Slide 2 - Larger image and reduced bullet spacing */
@@ -541,7 +555,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-slideshow[data-project="5"] .slide:nth-child(2) .slide-content ul li {
-    padding: 2px 0;
+    padding: 12px 0;
     padding-left: 30px;
     text-align: left;
     display: inline-block;
@@ -549,12 +563,30 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 85%;
     margin: 0 auto;
     position: relative;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.project-slideshow[data-project="5"] .slide:nth-child(2) .slide-content ul li:before {
+    content: "•";
+    position: absolute;
+    left: 8px;
+    color: #8490ff;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1;
+    top: 12px;
 }
 
 .slide-contribution .slide-content ul li:before {
-    font-size: 18px;
-    left: 5px;
-    top: 2px;
+    content: "•";
+    position: absolute;
+    left: 8px;
+    color: #8490ff;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1;
+    top: 12px;
 }
 
 .slide-contribution .slide-image {
@@ -580,7 +612,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .slide-contribution-3 .slide-content ul li {
-    padding: 4px 0;
+    padding: 12px 0;
     padding-left: 30px;
     text-align: left;
     display: inline-block;
@@ -588,6 +620,19 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 85%;
     margin: 0 auto;
     position: relative;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.slide-contribution-3 .slide-content ul li:before {
+    content: "•";
+    position: absolute;
+    left: 8px;
+    color: #8490ff;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1;
+    top: 12px;
 }
 
 /* Skills Categories Styling */
@@ -722,7 +767,7 @@ h1, h2, h3, h4, h5, h6 {
     #section-about.site-section {
         min-height: 100vh;
         padding: 0 !important;
-        padding-top: 0 !important;
+        padding-top: 100px !important;
     }
 
     #section-about .container {
@@ -797,8 +842,16 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .project-slideshow[data-project="4"] .slide:nth-child(2) .slide-content ul li {
-        padding: 2px 0;
+        padding: 10px 0;
+        padding-left: 28px;
         max-width: 90%;
+        font-size: 16px;
+    }
+    
+    .project-slideshow[data-project="4"] .slide:nth-child(2) .slide-content ul li:before {
+        left: 6px;
+        top: 10px;
+        font-size: 20px;
     }
     
     .project-slideshow[data-project="5"] .slide:nth-child(2) .slide-image {
@@ -806,8 +859,16 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .project-slideshow[data-project="5"] .slide:nth-child(2) .slide-content ul li {
-        padding: 2px 0;
+        padding: 10px 0;
+        padding-left: 28px;
         max-width: 90%;
+        font-size: 16px;
+    }
+    
+    .project-slideshow[data-project="5"] .slide:nth-child(2) .slide-content ul li:before {
+        left: 6px;
+        top: 10px;
+        font-size: 20px;
     }
     
     .figure-caption {
@@ -816,8 +877,15 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .slide-contribution .slide-content ul li {
-        padding: 3px 0;
-        font-size: 15px;
+        padding: 10px 0;
+        padding-left: 28px;
+        font-size: 16px;
+    }
+    
+    .slide-contribution .slide-content ul li:before {
+        left: 6px;
+        top: 10px;
+        font-size: 20px;
     }
     
     .slide-contribution .slide-image {
@@ -829,8 +897,16 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .slide-contribution-3 .slide-content ul li {
-        padding: 3px 0;
+        padding: 10px 0;
+        padding-left: 28px;
         max-width: 95%;
+        font-size: 16px;
+    }
+    
+    .slide-contribution-3 .slide-content ul li:before {
+        left: 6px;
+        top: 10px;
+        font-size: 20px;
     }
     
     .skills-categories {
@@ -886,7 +962,7 @@ h1, h2, h3, h4, h5, h6 {
     #section-about.site-section {
         min-height: 100vh;
         padding: 0 !important;
-        padding-top: 0 !important;
+        padding-top: 80px !important;
     }
 
     #section-about .container {
@@ -955,8 +1031,16 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .project-slideshow[data-project="4"] .slide:nth-child(2) .slide-content ul li {
-        padding: 1px 0;
+        padding: 8px 0;
+        padding-left: 25px;
         max-width: 95%;
+        font-size: 15px;
+    }
+    
+    .project-slideshow[data-project="4"] .slide:nth-child(2) .slide-content ul li:before {
+        left: 5px;
+        top: 8px;
+        font-size: 18px;
     }
     
     .project-slideshow[data-project="5"] .slide:nth-child(2) .slide-image {
@@ -964,8 +1048,16 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .project-slideshow[data-project="5"] .slide:nth-child(2) .slide-content ul li {
-        padding: 1px 0;
+        padding: 8px 0;
+        padding-left: 25px;
         max-width: 95%;
+        font-size: 15px;
+    }
+    
+    .project-slideshow[data-project="5"] .slide:nth-child(2) .slide-content ul li:before {
+        left: 5px;
+        top: 8px;
+        font-size: 18px;
     }
     
     .figure-caption {
@@ -974,8 +1066,15 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .slide-contribution .slide-content ul li {
-        padding: 2px 0;
-        font-size: 14px;
+        padding: 8px 0;
+        padding-left: 25px;
+        font-size: 15px;
+    }
+    
+    .slide-contribution .slide-content ul li:before {
+        left: 5px;
+        top: 8px;
+        font-size: 18px;
     }
     
     .slide-contribution .slide-image {
@@ -987,8 +1086,16 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .slide-contribution-3 .slide-content ul li {
-        padding: 2px 0;
+        padding: 8px 0;
+        padding-left: 25px;
         max-width: 98%;
+        font-size: 15px;
+    }
+    
+    .slide-contribution-3 .slide-content ul li:before {
+        left: 5px;
+        top: 8px;
+        font-size: 18px;
     }
     
     .skills-categories {
